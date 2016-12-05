@@ -1,0 +1,12 @@
+<div class="lang-switcher" (click)="langPopupVisible = !langPopupVisible"  [class.lang-switcher__active]="langPopupVisible">
+  <div class="lang-switcher__switch">
+    <div class="lang-switcher__flag lang-switcher__flag--{{ currentLanguage }}"></div>
+    <span class="lang-switcher__name">{{ currentLanguage }}</span>
+  </div>
+  <ul class="lang-switcher__options">
+    <li *ngFor="let lang of availableLanguages" (click)="switchLanguage(lang, $event);" [hidden]="lang === currentLanguage">
+      <div class="lang-switcher__flag lang-switcher__flag--{{ lang }}"></div>
+      <span class="lang-switcher__name">{{ lang }}</span>
+    </li>
+  </ul>
+</div>

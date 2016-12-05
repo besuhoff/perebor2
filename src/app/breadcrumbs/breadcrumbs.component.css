@@ -1,0 +1,13 @@
+.breadcrumbs li {
+  display: inline-block;
+  padding-right: 2px;
+}
+
+.breadcrumbs li:after {
+  content: '\2192';
+  margin-left: 6px;
+}
+
+.breadcrumbs li:last-child:after {
+  display: none;
+}

@@ -1,0 +1,7 @@
+<ul class="breadcrumbs">
+  <li><a href="/" [innerHtml]="'STUDIO_PROJECTS' | translate">Проекты студии</a></li>
+  <li>
+    <span *ngIf="itemIsArchive" archive>{{name}}</span>
+    <span *ngIf="!itemIsArchive">{{name}}</span>
+  </li>
+</ul>
