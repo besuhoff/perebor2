@@ -14,6 +14,8 @@ import { ArchiveDirective } from './archive.directive';
 import { routing, appRoutingProviders } from './app.routing';
 import {LanguageService} from "./language.service";
 import { ProjectComponent } from './project/project.component';
+import { PortfolioFmgComponent } from './portfolio/fmg/fmg.component';
+import { PortfolioWhoshoeComponent } from './portfolio/whoshoe/whoshoe.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ProjectComponent } from './project/project.component';
     BreadcrumbsComponent,
     PortfolioComponent,
     ArchiveDirective,
-    ProjectComponent
+    ProjectComponent,
+    PortfolioFmgComponent,
+    PortfolioWhoshoeComponent
   ],
   imports: [
     BrowserModule,

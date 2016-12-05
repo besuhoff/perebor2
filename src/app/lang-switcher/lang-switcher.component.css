@@ -1,12 +1,11 @@
 .lang-switcher {
   float: right;
-  margin-top: -10px;
-
   font-size: 13px;
   line-height: 24px;
   white-space: nowrap;
   position: relative;
-  color: #fff;
+  color: #f0f0f0;
+  padding: 6px 10px;
 }
 
 .lang-switcher__switch {
@@ -54,11 +53,13 @@
 .lang-switcher__options {
   display: none;
   list-style: none;
-  padding: 34px 0 0;
+  padding: 38px 10px 6px;
   position: absolute;
   right: 0;
   left: 0;
   top: 0;
+  box-shadow: 0 2px 8px -1px #1b1b1b;
+  background: #242424;
 }
 
 .lang-switcher__options > li {

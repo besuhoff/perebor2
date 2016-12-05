@@ -1,21 +1,67 @@
-<article>
-  <p [innerHtml]="'STUDIO_PEREBOR_ABOUT' | translate">Делаем сайты, интернет-магазины, промо-странички, интранет-приложения, мобильные приложения, логотипы, фирменные стили и&nbsp;вот&nbsp;это вот всё:</p>
+<article *ngIf="currentLanguage === 'ru'">
+  <p>Делаем сайты, интернет-магазины, промо-странички, интранет-приложения, мобильные приложения, логотипы, фирменные стили и&nbsp;вот&nbsp;это вот всё:</p>
   <ul>
-    <li><span [innerHtml]="'PORTFOLIO_PEREBOR' | translate">«<a href="http://pereborstudio.com">Перебор</a>»&nbsp;— сайт веб&#8209;студии (комбо! сапожник в сапогах! см. «<a href="http://lurkmore.to/Рекурсия">рекурсия</a>»)</span></li>
-    <li><span archive></span><span [innerHtml]="'PORTFOLIO_WHOSHOE' | translate">«<a href="/projects/whoshoe">Чей туфля?</a>»&nbsp;— интернет&#8209;магазин обуви</span></li>
-    <li><span archive></span><span [innerHtml]="'PORTFOLIO_FMG' | translate">«<a href="/projects/fmg">Фуд Маркет Груп</a>»&nbsp;— сайт&#8209;витрина продуктовой компании</span></li>
-    <li><span [innerHtml]="'PORTFOLIO_FTD' | translate">«<a href="http://feedthedevs.herokuapp.com">Накорми разработчиков</a>»&nbsp;— приложение, позволяющее оценивать предложенные разработчиками изменения в проектах на Гитхабе (идея и прототип <a href="http://stepansuvorov.com">Степана Суворова</a>)</span></li>
-    <li><span [innerHtml]="'PORTFOLIO_JUSTPRIVAT' | translate">«<a href="http://justprivat.com.ua">Юстприват</a>»&nbsp;— информационный сайт юридической фирмы</span></li>
-    <li><span [innerHtml]="'PORTFOLIO_AUTOLIGHTS' | translate">«<a href="http://remont-far.in.ua">Ремонт фар</a>»&nbsp;— целевая страница автомастерской</span></li>
-    <li><span [innerHtml]="'PORTFOLIO_XMAS' | translate">«<a href="https://play.google.com/store/apps/details?id=com.hiploaded.christmasbeard">Xmas Beard</a>»&nbsp;— рождественская игра под Андроид. Мы нарисовали интерфейс и логотип игры</span></li>
-    <li><span [innerHtml]="'PORTFOLIO_CAREERSTUDIO' | translate">Лендинг и блог «<a href="http://career-studio.com.ua">Студии карьерного развития</a>», тренеры которой помогают раскрыть таланты и построить успешную карьеру</span></li>
-    <li><span [innerHtml]="'PORTFOLIO_PEOPLEINBUSINESS' | translate">Сайт компании «<a href="http://peoplein.business">People in Business</a>», помогающей организациям налаживать коммуникации и бизнес-процессы, задействуя ресурсы сотрудников на полную</span></li>
+    <li><span>«<a href="http://pereborstudio.com">Перебор</a>»&nbsp;— сайт веб&#8209;студии (комбо! сапожник в сапогах! см. «<a href="http://lurkmore.to/Рекурсия">рекурсия</a>»)</span></li>
+    <li><span archive></span><span>«<a [routerLink]="'/projects/whoshoe'">Чей туфля?</a>»&nbsp;— интернет&#8209;магазин обуви</span></li>
+    <li><span archive></span><span>«<a [routerLink]="'/projects/fmg'">Фуд Маркет Груп</a>»&nbsp;— сайт&#8209;витрина продуктовой компании</span></li>
+    <li><span>«<a href="http://feedthedevs.herokuapp.com">Накорми разработчиков</a>»&nbsp;— приложение, позволяющее оценивать предложенные разработчиками изменения в проектах на Гитхабе (идея и прототип <a href="http://stepansuvorov.com">Степана Суворова</a>)</span></li>
+    <li><span>«<a href="http://justprivat.com.ua">Юстприват</a>»&nbsp;— информационный сайт юридической фирмы</span></li>
+    <li><span>«<a href="http://remont-far.in.ua">Ремонт фар</a>»&nbsp;— целевая страница автомастерской</span></li>
+    <li><span>«<a href="https://play.google.com/store/apps/details?id=com.hiploaded.christmasbeard">Xmas Beard</a>»&nbsp;— рождественская игра под Андроид. Мы нарисовали интерфейс и логотип игры</span></li>
+    <li><span>Лендинг и блог «<a href="http://career-studio.com.ua">Студии карьерного развития</a>», тренеры которой помогают раскрыть таланты и построить успешную карьеру</span></li>
+    <li><span>Сайт компании «<a href="http://peoplein.business">People in Business</a>», помогающей организациям налаживать коммуникации и бизнес-процессы, задействуя ресурсы сотрудников на полную</span></li>
   </ul>
-  <h4><span [innerHtml]="'PORTFOLIO_RABBIT' | translate">А ещё у нас есть зайчик:</span> <img src="../../assets/images/logo_100x100_transp_dark.png"></h4>
+  <h4><span>А ещё у нас есть зайчик:</span> <img src="../../assets/images/logo_100x100_transp_dark.png"></h4>
 
-  <h2 [innerHtml]="'CONTACT_US' | translate">Напишите нам:</h2>
-  <p [innerHtml]="'CONTACT_ANIA' | translate">Аня Переверзева, акула планшетного пера — <a href="mailto:ania&#64;pereborstudio.com">ania&#64;pereborstudio.com</a></p>
-  <p [innerHtml]="'CONTACT_SERG' | translate">Серёжа Переверзев, текстовый евангелист — <a href="mailto:serg&#64;pereborstudio.com">serg&#64;pereborstudio.com</a></p>
+  <h2>Напишите нам:</h2>
+  <p>Аня Переверзева, акула планшетного пера — <a href="mailto:ania&#64;pereborstudio.com">ania&#64;pereborstudio.com</a></p>
+  <p>Серёжа Переверзев, текстовый евангелист — <a href="mailto:serg&#64;pereborstudio.com">serg&#64;pereborstudio.com</a></p>
   <div class="hr"></div>
-  <p class = "ref" [innerHtml]="'STUDIO_PEREBOR_REFERENCE' | translate">Принципиально разрешимые задачи всегда разрешимы путём, как&nbsp;минимум, полного перебора. Студия «Перебор» сделает для&nbsp;вас подходящий инструмент, пусть даже для&nbsp;этого придётся перебрать и&nbsp;отбросить множество вариантов.</p>
+  <p class = "ref">Принципиально разрешимые задачи всегда разрешимы путём, как&nbsp;минимум, полного перебора. Студия «Перебор» сделает для&nbsp;вас подходящий инструмент, пусть даже для&nbsp;этого придётся перебрать и&nbsp;отбросить множество вариантов.</p>
+</article>
+
+<article *ngIf="currentLanguage === 'ua'">
+  <p>Створюємо сайти, інтернет-магазини, промо-сторіночки, інтранет-додатки, мобільні додатки, логотипи, фірмові стилі й&nbsp;усе&nbsp;таке інше:</p>
+  <ul>
+    <li><span>«<a href="http://pereborstudio.com">Перебор</a>»&nbsp;— сайт веб&#8209;студії (комбо! чобітар в чоботях! див. «<a href="http://lurkmore.to/Рекурсия">рекурсія</a>»)</span></li>
+    <li><span archive></span><span>«<a [routerLink]="'/projects/whoshoe'">Чий туфля?</a>»&nbsp;— інтернет&#8209;магазин взуття</span></li>
+    <li><span archive></span><span>«<a [routerLink]="'/projects/fmg'">Фуд Маркет Груп</a>»&nbsp;— сайт&#8209;вітрина продуктової компанії</span></li>
+    <li><span>«<a href="http://feedthedevs.herokuapp.com">Нагодуй розробників</a>»&nbsp;— додаток, що дозволяє оцінювати зміни в проектах на Гітхабі, що їх запропоновано розробниками (ідея та прототип <a href="http://stepansuvorov.com">Степана Суворова</a>)</span></li>
+    <li><span>«<a href="http://justprivat.com.ua">Юстприват</a>»&nbsp;— інформаційний сайт юридичної фірми</span></li>
+    <li><span>«<a href="http://remont-far.in.ua">Ремонт фар</a>»&nbsp;— цільова сторінка автомайстерні</span></li>
+    <li><span>«<a href="https://play.google.com/store/apps/details?id=com.hiploaded.christmasbeard">Xmas Beard</a>»&nbsp;— різдвяна гра під Андроїд. Ми намалювали інтерфейс та логотип гри</span></li>
+    <li><span>Лендінг і блог «<a href="http://career-studio.com.ua">Студії кар’єрного розвитку</a>», тренери якої допомогають розкрити таланти та побудувати успішну кар’єру</span></li>
+    <li><span>Сайт компанії «<a href="http://peoplein.business">People in Business</a>», яка допомагає організаціям налагоджувати комуникації та бізнес-процеси, залучаючи ресурси співробітників в повному обсязі</span></li>
+  </ul>
+  <h4><span>А ще в нас є зайченятко:</span> <img src="../../assets/images/logo_100x100_transp_dark.png"></h4>
+
+  <h2>Напишіть нам:</h2>
+  <p>Аня Переверзєва, акула планшетного пера — <a href="mailto:ania&#64;pereborstudio.com">ania&#64;pereborstudio.com</a></p>
+  <p>Сірожа Переверзєв, текстовий євангеліст — <a href="mailto:serg&#64;pereborstudio.com">serg&#64;pereborstudio.com</a></p>
+  <div class="hr"></div>
+  <p class = "ref">Задачі, що їх можна розв’язати в принципі, завжди можна розв’язати шляхом, щонайменше, повного перебору. Студія «Перебор» створить для&nbsp;вас гідний інструмент, нехай навіть задля цього прийдеться перебрати та&nbsp;відкинути безліч варіантів.</p>
+</article>
+
+<article *ngIf="currentLanguage === 'en'">
+  <p>Creating websites, e-commerce shops, promo pages, intranet apps, mobile apps, logos, corporate identities and stuff:</p>
+  <ul>
+    <li><span>“<a href="http://pereborstudio.com">Perebor Studio</a>”&nbsp;— the web studio site (combo! Shoemaker goes in boots!)</span></li>
+    <li><span archive></span><span>“<a [routerLink]="'/projects/whoshoe'">Who Shoe?</a>”&nbsp;— an e-commerce shoes shop</span></li>
+    <li><span archive></span><span>“<a [routerLink]="'/projects/fmg'">Food Market Group</a>”&nbsp;— online&#8209;showcase for the food company</span></li>
+    <li><span>“<a href="http://feedthedevs.herokuapp.com">Feed the devs</a>”&nbsp;— an app to rate developers’ contributions to Github projects (idea and prototype by <a href="http://stepansuvorov.com">Stepan Suvorov</a>)</span></li>
+    <li><span>“<a href="http://justprivat.com.ua">Justprivat</a>”&nbsp;— information website for a law firm</span></li>
+    <li><span>“<a href="http://remont-far.in.ua">Lamp Repair</a>”&nbsp;— a landing page for a car repair shop</span></li>
+    <li><span>“<a href="https://play.google.com/store/apps/details?id=com.hiploaded.christmasbeard">Xmas Beard</a>”&nbsp;— an Android Christmas game. We designed a logo and an interface for the game</span></li>
+    <li><span>Landing page and a blog for the “<a href="http://career-studio.com.ua">Career studio</a>”, where trainers help discover your talents and raise a successful career</span></li>
+    <li><span>A website for “<a href="http://peoplein.business">People in Business</a>”, who help companies set up communication and business process, involving employees’ resources at full capacity</span></li>
+  </ul>
+  <h4><span>We also have a bunny:</span> <img src="../../assets/images/logo_100x100_transp_dark.png"></h4>
+
+  <h2>Drop us a line!</h2>
+  <p>
+    Ania Pereverzieva, the picturesmith — <a href="mailto:ania&#64;pereborstudio.com">ania&#64;pereborstudio.com</a><br/>
+    Sergiy Pereverziev, the text evangelist — <a href="mailto:serg&#64;pereborstudio.com">serg&#64;pereborstudio.com</a>
+  </p>
+  <div class="hr"></div>
+  <p class = "ref">Perebor stands for “Generate” in Russian. Solvable problems can always be solved by the “Generate and test” method as a simplest. Perebor Studio will create the right tool for you, even if it will require to generate and test a lot of options.</p>
 </article>

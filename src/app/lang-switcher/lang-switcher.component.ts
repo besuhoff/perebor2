@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {LanguageService} from "../language.service";
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   selector: 'lang-switcher',
@@ -11,15 +12,11 @@ export class LangSwitcherComponent implements OnInit, OnDestroy {
   private langPopupVisible: boolean;
   private currentLanguage: string;
   private availableLanguages: string[];
+  private languageChangedSubscription: Subscription;
 
   constructor(private languageService: LanguageService) {
     this.langPopupVisible = false;
     this.availableLanguages = this.languageService.getAvailableLanguages();
-
-
-    this.languageService.languageChanged.subscribe(() => {
-      this.currentLanguage = this.languageService.getCurrentLanguage();
-    });
   }
 
   switchLanguage(lang: string, $event) {
@@ -29,10 +26,13 @@ export class LangSwitcherComponent implements OnInit, OnDestroy {
   };
 
   ngOnInit() {
+    this.languageChangedSubscription = this.languageService.languageChanged.subscribe(() => {
+      this.currentLanguage = this.languageService.getCurrentLanguage();
+    });
   }
 
   ngOnDestroy() {
-    this.languageService.languageChanged.unsubscribe();
+    this.languageChangedSubscription.unsubscribe();
   }
 
 }

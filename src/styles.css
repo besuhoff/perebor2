@@ -1,9 +1,27 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'PT Sans', sans-serif;
   font-size: 16px;
   line-height: 24px;
   background: #242424;
   color: #f0f0f0;
+  margin: 0;
+  height: 100%;
+}
+
+app-root {
+  display: block;
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -19,6 +37,7 @@ h1, h2 {
   margin-bottom: 0.2em;
   font-weight: normal;
   line-height: 1em;
+  font-family: 'PT Serif', serif;
 }
 
 h1 {
@@ -42,7 +61,7 @@ h1 {
 }
 
 p {
-  margin: 0;
+  margin: 0 0 1em;
 }
 
 h4 {
@@ -99,4 +118,12 @@ figcaption {
 
 [hidden] {
   display: none !important;
+}
+
+.loader {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
