@@ -18,13 +18,11 @@ export class LanguageService {
 
   getCurrentLanguage() {
     let browserLang = this.translate.getBrowserLang();
-    return this.cookies.get('lang') || browserLang.match(new RegExp(this.getAvailableLanguages().join('|'))) ? browserLang : 'ua';
+    return this.cookies.get('lang') || (browserLang.match(new RegExp(this.getAvailableLanguages().join('|'))) ? browserLang : 'ua');
   }
 
   initLanguage() {
-    var lang = this.getCurrentLanguage();
-    this.translate.addLangs(this.getAvailableLanguages());
-    this.translate.setDefaultLang('ua');
+    let lang = this.getCurrentLanguage();
     this.translate.use(lang);
     this.cookies.put('lang', lang);
     this._languageChanged.next(lang);
@@ -35,6 +33,9 @@ export class LanguageService {
     this.initLanguage();
   }
 
-  constructor(private translate: TranslateService, private cookies: CookieService) {}
+  constructor(private translate: TranslateService, private cookies: CookieService) {
+    this.translate.addLangs(this.getAvailableLanguages());
+    this.translate.setDefaultLang('ua');
+  }
 
 }

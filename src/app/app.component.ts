@@ -7,7 +7,7 @@ import {LanguageService} from "./language.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private languageService: LanguageService) {
+  constructor(languageService: LanguageService) {
     languageService.initLanguage();
   }
 }

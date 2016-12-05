@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {LanguageService} from "../language.service";
 
 @Component({
@@ -6,14 +6,11 @@ import {LanguageService} from "../language.service";
   templateUrl: './lang-switcher.component.html',
   styleUrls: ['./lang-switcher.component.css']
 })
-export class LangSwitcherComponent implements OnInit {
+export class LangSwitcherComponent implements OnInit, OnDestroy {
 
   private langPopupVisible: boolean;
   private currentLanguage: string;
   private availableLanguages: string[];
-
-  private _initLanguageList() {
-  }
 
   constructor(private languageService: LanguageService) {
     this.langPopupVisible = false;
@@ -25,13 +22,17 @@ export class LangSwitcherComponent implements OnInit {
     });
   }
 
-  switchLanguage(lang, $event) {
+  switchLanguage(lang: string, $event) {
     $event.stopPropagation();
     this.languageService.changeLanguage(lang);
     this.langPopupVisible = false;
   };
 
   ngOnInit() {
+  }
+
+  ngOnDestroy() {
+    this.languageService.languageChanged.unsubscribe();
   }
 
 }
