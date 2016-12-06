@@ -1,8 +1,8 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PortfolioComponent} from "./portfolio/portfolio.component";
-import {PortfolioWhoshoeComponent} from "./portfolio/whoshoe/whoshoe.component";
-import {PortfolioFmgComponent} from "./portfolio/fmg/fmg.component";
+import {ProjectWhoshoeComponent} from "./project/whoshoe/whoshoe.component";
+import {ProjectFmgComponent} from "./project/fmg/fmg.component";
 import {ProjectComponent} from "./project/project.component";
 
 
@@ -16,8 +16,8 @@ const appRoutes: Routes = [
     path: 'projects',
     component: ProjectComponent,
     children: [
-      { path: 'whoshoe', component: PortfolioWhoshoeComponent },
-      { path: 'fmg', component: PortfolioFmgComponent },
+      { path: 'whoshoe', component: ProjectWhoshoeComponent },
+      { path: 'fmg', component: ProjectFmgComponent },
     ]
   },
   { path: '**', component: PortfolioComponent }

@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
-import {LanguageService} from "../../language.service";
+import {LanguageService} from "../../language.service.ts";
 
 @Component({
-  selector: 'portfolio-fmg',
-  templateUrl: './fmg.component.html',
-  styleUrls: ['./fmg.component.css']
+  selector: 'portfolio-whoshoe',
+  templateUrl: './whoshoe.component.html',
+  styleUrls: ['./whoshoe.component.css']
 })
-export class PortfolioFmgComponent implements OnInit, OnDestroy {
+export class ProjectWhoshoeComponent implements OnInit, OnDestroy {
 
   private languageChangedSubscription: Subscription;
   private currentLanguage: string;
@@ -23,5 +23,4 @@ export class PortfolioFmgComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.languageChangedSubscription.unsubscribe();
   }
-
 }
