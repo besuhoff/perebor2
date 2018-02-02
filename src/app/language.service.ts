@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {TranslateService} from 'ng2-translate';
+import { TranslateService } from '@ngx-translate/core';
 import {ReplaySubject} from 'rxjs/ReplaySubject'
-import {CookieService} from 'angular2-cookie/services/cookies.service';
+import {CookieService} from 'ngx-cookie';
 
 @Injectable()
 export class LanguageService {

@@ -98,6 +98,10 @@ blockquote {
   margin: 20px 0;
 }
 
+blockquote p {
+  margin: 0;
+}
+
 figure {
   margin: 1em 20px 2em 0;
   display: inline-table;

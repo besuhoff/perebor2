@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import {Subscription} from 'rxjs/Subscription';
-import {LanguageService} from "../../language.service.ts";
+import {LanguageService} from '../../language.service';
 
 @Component({
   selector: 'portfolio-fmg',

@@ -3,11 +3,11 @@ import {Subscription} from 'rxjs/Subscription';
 import {LanguageService} from '../../language.service';
 
 @Component({
-  selector: 'portfolio-whoshoe',
-  templateUrl: './whoshoe.component.html',
-  styleUrls: ['./whoshoe.component.css']
+  selector: 'portfolio-people-in-business',
+  templateUrl: './people-in-business.component.html',
+  styleUrls: ['./people-in-business.component.css']
 })
-export class ProjectWhoshoeComponent implements OnInit, OnDestroy {
+export class ProjectPeopleInBusinessComponent implements OnInit, OnDestroy {
 
   private languageChangedSubscription: Subscription;
   private currentLanguage: string;
@@ -23,4 +23,5 @@ export class ProjectWhoshoeComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.languageChangedSubscription.unsubscribe();
   }
+
 }

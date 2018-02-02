@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule, Http } from '@angular/http';
-import {TranslateModule, TranslateStaticLoader, TranslateLoader} from 'ng2-translate';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { CookieModule } from 'ngx-cookie';
 
 import { AppComponent } from './app.component';
 import { LangSwitcherComponent } from './lang-switcher/lang-switcher.component';
@@ -16,6 +17,12 @@ import {LanguageService} from "./language.service";
 import { ProjectComponent } from './project/project.component';
 import { ProjectFmgComponent } from './project/fmg/fmg.component';
 import { ProjectWhoshoeComponent } from './project/whoshoe/whoshoe.component';
+import { ProjectJustprivatComponent } from './project/justprivat/justprivat.component';
+import { ProjectPeopleInBusinessComponent } from './project/people-in-business/people-in-business.component';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -26,22 +33,26 @@ import { ProjectWhoshoeComponent } from './project/whoshoe/whoshoe.component';
     ArchiveDirective,
     ProjectComponent,
     ProjectFmgComponent,
-    ProjectWhoshoeComponent
+    ProjectWhoshoeComponent,
+    ProjectJustprivatComponent,
+    ProjectPeopleInBusinessComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    CookieModule.forRoot(),
+    HttpClientModule,
     TranslateModule.forRoot({
-      provide: TranslateLoader,
-      useFactory: (http:Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
-      deps: [Http]
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
     }),
     routing
   ],
   providers: [
     appRoutingProviders,
-    CookieService,
     LanguageService
   ],
   bootstrap: [AppComponent]
