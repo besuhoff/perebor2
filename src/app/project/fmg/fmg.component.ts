@@ -10,7 +10,7 @@ import {LanguageService} from '../../language.service';
 export class ProjectFmgComponent implements OnInit, OnDestroy {
 
   private languageChangedSubscription: Subscription;
-  private currentLanguage: string;
+  public currentLanguage: string;
 
   constructor(private languageService: LanguageService) { }
 
