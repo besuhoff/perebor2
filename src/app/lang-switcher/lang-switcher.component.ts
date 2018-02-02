@@ -9,10 +9,10 @@ import {Subscription} from 'rxjs/Subscription';
 })
 export class LangSwitcherComponent implements OnInit, OnDestroy {
 
-  private langPopupVisible: boolean;
-  private currentLanguage: string;
-  private availableLanguages: string[];
-  private languageChangedSubscription: Subscription;
+  public langPopupVisible: boolean;
+  public currentLanguage: string;
+  public availableLanguages: string[];
+  public languageChangedSubscription: Subscription;
 
   constructor(private languageService: LanguageService) {
     this.langPopupVisible = false;
