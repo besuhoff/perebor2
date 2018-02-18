@@ -1,15 +1,16 @@
 import { Directive, ElementRef } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { LocaleService } from './locale.service';
 
 @Directive({
   selector: '[archive]'
 })
 export class ArchiveDirective {
 
-  constructor($element: ElementRef, $translate: TranslateService) {
-    $translate.get('MOVED_TO_ARCHIVE').subscribe(function(text) {
+  constructor($element: ElementRef, locale: LocaleService) {
+    $element.nativeElement.classList.add('archive');
+
+    locale.translate$('base.archived').subscribe(function(text) {
       $element.nativeElement.title = text;
-      $element.nativeElement.classList.add('archive');
     });
   }
 

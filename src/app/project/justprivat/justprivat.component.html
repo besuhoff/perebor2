@@ -1,71 +1,29 @@
-<div *ngIf="currentLanguage === 'ru'">
-  <breadcrumbs item-is-archive="true" name="Презентационный сайт фирмы «Юстприват»"></breadcrumbs>
-  <article>
-    <blockquote>
-      <p><strong>Год выпуска:</strong> 2014.</p>
-      <p><strong>Задача:</strong> создать презентационный сайт юридической фирмы.</p>
-    </blockquote>
-    <p>Мы разработали структурированный сайт, рассказывающий о компании, её сотрудниках и об услугах для разных групп клиентов.</p>
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/large-screen.png" alt="Главная страница" width="1280" height="1366"></p>
-      <figcaption>Описание услуг на главной</figcaption>
-    </figure>
+<article>
+  <blockquote>
+    <p><strong><span localeKey="project.releaseYear"></span>:</strong> 2014.</p>
+    <p><strong><span localeKey="project.task"></span>:</strong> <span localeKey="project.justprivat.task"></span></p>
+  </blockquote>
+  <p localeKey="project.justprivat.intro"></p>
+  <figure>
+    <p><img src="assets/images/bucket/justprivat/large-screen.png" alt="'project.justprivat.main' | localize" width="1280" height="1366"></p>
+    <figcaption localeKey="project.justprivat.serviceDescription"></figcaption>
+  </figure>
 
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/mobile.png" alt="Главная на мобильном устройстве" width="460" height="1733"></p>
-      <figcaption>Сайт удобно просматривать и с компьютеров, и с мобильных устройств</figcaption>
-    </figure>
+  <figure>
+    <p><img src="assets/images/bucket/justprivat/mobile.png" alt="'project.justprivat.mobileMain' | localize" width="460" height="1733"></p>
+    <figcaption localeKey="project.justprivat.adaptiveSite"></figcaption>
+  </figure>
 
-    <p>Сайт издают на двух языках — русском и украинском. Панель администратора позволяет настраивать переводы содержимого на любых языках.</p>
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/languages.png" alt="Украинская версия сайта" width="880" height="1194"></p>
-      <figcaption>Украинская версия сайта</figcaption>
-    </figure>
+  <p localeKey="project.justprivat.twoLanguages"></p>
+  <figure>
+    <p><img src="assets/images/bucket/justprivat/languages.png" alt="'project.justprivat.uaVersion' | localize" width="880" height="1194"></p>
+    <figcaption localeKey="project.justprivat.uaVersion"></figcaption>
+  </figure>
 
-    <p>В блоге сотрудники фирмы публикуют ответы на популярные вопросы и актуальные случаи из юридической практики.</p>
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/blog.png" alt="Блог с актуальными случаями из юридической практики" width="866" height="914"></p>
-    </figure>
+  <p localeKey="project.justprivat.blogDescribesCases"></p>
+  <figure>
+    <p><img src="assets/images/bucket/justprivat/blog.png" alt="'project.justprivat.cases' | localize" width="866" height="914"></p>
+  </figure>
 
-    <p>Работа сдана в архив в 2016 году.</p>
-  </article>
-  <p><a [routerLink]="'/'">Вернуться к списку проектов</a></p>
-</div>
-<div *ngIf="currentLanguage === 'ua'">
-  <breadcrumbs item-is-archive="true" name="Презентацийний сайт фірми «Юстпріват»"></breadcrumbs>
-  <article>
-    <blockquote>
-      <p><strong>Рік випуску:</strong> 2014.</p>
-      <p><strong>Задача:</strong> створити презентаційний сайт юрідичної фірми.</p>
-    </blockquote>
-    <p>Мы розробили структурований сайт, що розповідає про компанію, її співробітників, а також про послуги для різних груп клієнтів.</p>
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/large-screen.png" alt="Головна сторінка" width="1280" height="1366"></p>
-      <figcaption>Опис послуг на головній</figcaption>
-    </figure>
-
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/mobile.png" alt="Головна на мобільному пристрої" width="460" height="1733"></p>
-      <figcaption>Сайт зручно проглядати як з комп’ютерів, так і з мобільних пристроїв</figcaption>
-    </figure>
-
-    <p>Сайт видають двома мовами — російською та українською. Панель адміністратора дозволяє налаштувати переклад вмісту будь-якою мовою світу.</p>
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/languages.png" alt="Українська версія сайту" width="880" height="1194"></p>
-      <figcaption>Українська версія сайту</figcaption>
-    </figure>
-
-    <p>В блозі співробітники фірми публікують відповіді на популярні питання та актуальні випадки з юридичної практики.</p>
-    <figure>
-      <p><img src="assets/images/bucket/justprivat/blog.png" alt="Блог з актуальними випадками з юридичної практики" width="866" height="914"></p>
-    </figure>
-
-    <p>Работу здано до архіва у 2016 році.</p>
-  </article>
-  <p><a [routerLink]="'/'">Повернутися до списку проектів</a></p>
-</div>
-
-<div *ngIf="currentLanguage === 'en'">
-  <breadcrumbs item-is-archive="true" name="Presentational website for Jusprivat law firm"></breadcrumbs>
-  <h2>The article in this language is coming soon...</h2>
-</div>
+  <p localeKey="project.justprivat.archivedIn"></p>
+</article>
