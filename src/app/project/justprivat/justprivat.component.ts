@@ -1,6 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Subscription} from 'rxjs/Subscription';
-import {LanguageService} from '../../language.service';
+import { BreadcrumbService } from '../../breadcrumb.service';
 
 @Component({
   selector: 'portfolio-justprivat',
@@ -9,19 +8,15 @@ import {LanguageService} from '../../language.service';
 })
 export class ProjectJustprivatComponent implements OnInit, OnDestroy {
 
-  private languageChangedSubscription: Subscription;
-  public currentLanguage: string;
+  public constructor(private breadcrumbService: BreadcrumbService) {
 
-  constructor(private languageService: LanguageService) { }
-
-  ngOnInit() {
-    this.languageChangedSubscription = this.languageService.languageChanged.subscribe(() => {
-      this.currentLanguage = this.languageService.getCurrentLanguage();
-    });
   }
 
-  ngOnDestroy() {
-    this.languageChangedSubscription.unsubscribe();
+  public ngOnInit(): void {
+    setTimeout(() => this.breadcrumbService.setBreadcrumb('project.justprivat.title'));
   }
 
+  public ngOnDestroy(): void {
+    this.breadcrumbService.setBreadcrumb(null);
+  }
 }

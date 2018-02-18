@@ -1,19 +1,36 @@
-<div *ngIf="currentLanguage === 'ru'">
-  <breadcrumbs item-is-archive="true" name="Сайт компании «People in Business»"></breadcrumbs>
-  <article>
-    <p>Работа сдана в архив в 2016 году.</p>
-  </article>
-  <p><a [routerLink]="'/'">Вернуться к списку проектов</a></p>
-</div>
-<div *ngIf="currentLanguage === 'ua'">
-  <breadcrumbs item-is-archive="true" name="Сайт компанії «People in Business»"></breadcrumbs>
-  <article>
-    <p>Роботу здано до архіву в 2016 році.</p>
-  </article>
-  <p><a [routerLink]="'/'">Повернутися до списку проектів</a></p>
-</div>
+<article>
+  <blockquote>
+    <p><strong><span localeKey="project.releaseYear"></span>:</strong> 2015.</p>
+    <p><strong><span localeKey="project.task"></span>:</strong> <span localeKey="project.peopleinbusiness.task"></span></p>
+  </blockquote>
 
-<div *ngIf="currentLanguage === 'en'">
-  <breadcrumbs item-is-archive="true" name="The website for “People in Business”"></breadcrumbs>
-  <h2>The article in this language is coming soon...</h2>
-</div>
+  <p localeKey="project.peopleinbusiness.fancySite"></p>
+  <p localeKey="project.peopleinbusiness.metaphor"></p>
+  <figure>
+    <p><img src="assets/images/bucket/peopleinbusiness/desktop.gif" alt="'project.peopleinbusiness.main' | localize" width="1918" height="911"></p>
+    <figcaption localeKey="project.peopleinbusiness.presentationalLanding"></figcaption>
+  </figure>
+  <p localeKey="project.peopleinbusiness.lighthouse"></p>
+  <figure>
+    <p><img src="assets/images/bucket/peopleinbusiness/lighthouse.gif" alt="'project.peopleinbusiness.metamorphose' | localize" width="892" height="590"></p>
+    <p><img src="assets/images/bucket/peopleinbusiness/footer.png" alt="'project.peopleinbusiness.footerLighthouse' | localize" width="386" height="207"></p>
+    <figcaption localeKey="project.peopleinbusiness.polymorphicLighthouse"></figcaption>
+  </figure>
+  <p localeKey="project.peopleinbusiness.goodMobile"></p>
+  <figure>
+    <p><img src="assets/images/bucket/peopleinbusiness/mobile.gif" alt="'project.peopleinbusiness.mobileVersion' | localize" width="324" height="480"></p>
+    <figcaption localeKey="project.peopleinbusiness.mobileVersion"></figcaption>
+  </figure>
+  <p localeKey="project.peopleinbusiness.solutionsScreen"></p>
+  <figure>
+    <p><img src="assets/images/bucket/peopleinbusiness/products.gif" alt="'project.peopleinbusiness.solutions' | localize" width="1501" height="678"></p>
+    <figcaption localeKey="project.peopleinbusiness.solutions"></figcaption>
+  </figure>
+  <p localeKey="project.peopleinbusiness.mainPic"></p>
+  <figure>
+    <p><img src="assets/images/bucket/peopleinbusiness/people.png" alt="'project.peopleinbusiness.peopleInBusiness' | localize" width="1549" height="587"></p>
+    <figcaption localeKey="project.peopleinbusiness.peopleInBusiness"></figcaption>
+  </figure>
+
+  <p localeKey="project.peopleinbusiness.archivedIn"></p>
+</article>

@@ -1,3 +1,10 @@
-<lang-switcher></lang-switcher>
-<h1 [innerHtml]="'STUDIO_PEREBOR_HEADER' | translate">Веб-студия «Перебор»<small>*</small></h1>
+<header>
+  <div class="row">
+    <a class="logo" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><h1 localeKey="base.header">[0]<small class="extras">[1]</small></h1></a>
+    <lang-switcher></lang-switcher>
+  </div>
+  <div class="row">
+    <breadcrumbs [@shrinkOut] *ngIf="breadcrumb$ | async" [itemIsArchive]="true" [name]="(breadcrumb$ | async) | localize"></breadcrumbs>
+  </div>
+</header>
 <router-outlet></router-outlet>

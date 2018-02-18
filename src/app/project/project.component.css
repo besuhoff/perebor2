@@ -1,0 +1,12 @@
+.back-link {
+  text-decoration: none;
+}
+
+.back-link:before {
+  content: '\2190';
+  margin-right: 6px;
+}
+
+.back-link .content {
+  text-decoration: underline;
+}

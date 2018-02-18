@@ -26,7 +26,7 @@ export class LangSwitcherComponent implements OnInit, OnDestroy {
   };
 
   ngOnInit() {
-    this.languageChangedSubscription = this.languageService.languageChanged.subscribe(() => {
+    this.languageChangedSubscription = this.languageService.language$.subscribe(() => {
       this.currentLanguage = this.languageService.getCurrentLanguage();
     });
   }

@@ -6,6 +6,7 @@
   position: relative;
   color: #f0f0f0;
   padding: 6px 10px;
+  margin: -6px -10px;
 }
 
 .lang-switcher__switch {
