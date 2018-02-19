@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import {ReplaySubject} from 'rxjs/ReplaySubject'
 import {CookieService} from 'ngx-cookie';
-import en from '../locale/en';
-import ru from '../locale/ru';
-import ua from '../locale/ua';
+const { en } = require('../locale/en');
+const { ru } = require('../locale/ru');
+const { ua } = require('../locale/ua');
 
 const locales = {
   ru,

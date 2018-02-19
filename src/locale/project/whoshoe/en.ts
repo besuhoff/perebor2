@@ -1,4 +1,4 @@
-const locale: Translation = {
+export const whoshoe: Translation = {
   title: 'Online shoes store “Who shoe?”',
   task: 'create a commercial Internet site for the shoe store.',
   intro: 'Perebor team has developed a trademark, a logo and a website for a cheap shoes shop. The name "Who shoe?", that was immediately accepted by the customer, has determined the humorous style of interface interaction with the user.',
@@ -55,5 +55,3 @@ const locale: Translation = {
   thanks: 'Thank you!',
   archivedIn: 'The work is archived in 2014.',
 };
-
-export default locale;

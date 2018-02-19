@@ -1,9 +1,9 @@
-import whoshoe from './project/whoshoe/ru';
-import justprivat from './project/justprivat/ru';
-import fmg from './project/fmg/ru';
-import peopleinbusiness from './project/peopleinbusiness/ru';
+import { whoshoe } from './project/whoshoe/ru';
+import { justprivat } from './project/justprivat/ru';
+import { fmg } from './project/fmg/ru';
+import { peopleinbusiness } from './project/peopleinbusiness/ru';
 
-const locale: Locale = {
+export const ru: Locale = {
   base: {
     header: ['Веб-студия «Перебор»', '*'],
     archived: 'Работа сдана в архив',
@@ -42,5 +42,3 @@ const locale: Locale = {
     peopleinbusiness,
   }
 };
-
-export default locale;

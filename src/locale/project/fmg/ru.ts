@@ -1,4 +1,4 @@
-const locale: Translation = {
+export const fmg: Translation = {
   title: 'Интернет-витрина «Фуд Маркет Груп»',
   task: 'создать интернет-витрину для распространителя импортных продуктов питания.',
   intro: 'В студии разработали привлекательный сайт с возможностями интернет-витрины и блога.',
@@ -11,5 +11,3 @@ const locale: Translation = {
   representativesMap: 'Карта представительств',
   archivedIn: 'Работа сдана в архив в 2015 году.',
 };
-
-export default locale;

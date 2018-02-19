@@ -1,4 +1,4 @@
-const locale: Translation = {
+export const peopleinbusiness: Translation = {
   title: 'A website for the People in Business',
   task: 'create a presentational website and a blog for the consulting company.',
 /*  fancySite: 'Вдохновившись свежими трендами, мы решили сделать интерактивный сайт с живым содержимым и современной графикой.',
@@ -17,5 +17,3 @@ const locale: Translation = {
   peopleInBusiness: 'Деловые люди', */
   archivedIn: 'The work is archived in 2016.',
 };
-
-export default locale;
