@@ -1,9 +1,9 @@
-import whoshoe from './project/whoshoe/en';
-import justprivat from './project/justprivat/en';
-import fmg from './project/fmg/en';
-import peopleinbusiness from './project/peopleinbusiness/en';
+import { whoshoe } from './project/whoshoe/en';
+import { justprivat } from './project/justprivat/en';
+import { fmg } from './project/fmg/en';
+import { peopleinbusiness } from './project/peopleinbusiness/en';
 
-const locale: Locale = {
+export const en: Locale = {
   base: {
     header: ['Perebor Studio', '*'],
     archived: 'The project is archived',
@@ -42,5 +42,3 @@ const locale: Locale = {
     peopleinbusiness,
   }
 };
-
-export default locale;

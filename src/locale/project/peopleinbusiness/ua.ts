@@ -1,4 +1,4 @@
-const locale: Translation = {
+export const peopleinbusiness: Translation = {
   title: 'Сайт компанії «People in Business»',
   task: 'створити презентаційний сайт і блог консалтингової компанії.',
   fancySite: 'Натхненні свіжими трендами, ми вирішили зробити інтерактивний сайт з живим контентом і сучасною графікою.',
@@ -17,5 +17,3 @@ const locale: Translation = {
   peopleInBusiness: 'Ділові люди',
   archivedIn: 'Роботу здано до архіва у 2016 році.',
 };
-
-export default locale;

@@ -1,4 +1,4 @@
-const locale: Translation = {
+export const fmg: Translation = {
   title: 'Online showcase for the Food Market Group',
   task: 'create a web showroom for the imported goods distributor.',
 /*  intro: 'В студии разработали привлекательный сайт с возможностями интернет-витрины и блога.',
@@ -11,5 +11,3 @@ const locale: Translation = {
   representativesMap: 'Карта представительств', */
   archivedIn: 'The work is archived in 2015.',
 };
-
-export default locale;

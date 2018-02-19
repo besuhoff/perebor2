@@ -1,4 +1,4 @@
-const locale: Translation = {
+export const justprivat: Translation = {
   title: 'A presentational website for the Justprivat',
   task: 'create a presentational website for the law firm.',
 /*
@@ -13,5 +13,3 @@ const locale: Translation = {
   cases: 'Блог с актуальными случаями из юридической практики', */
   archivedIn: 'The work is archived in 2016.',
 };
-
-export default locale;
