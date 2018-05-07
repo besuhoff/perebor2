@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {LanguageService} from "../language.service";
-import {Subscription} from 'rxjs/Subscription';
+import {LanguageService} from '../language.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'lang-switcher',

@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { LanguageService } from './language.service';
-import 'rxjs/add/operator/map';
+import { map } from 'rxjs/operators';
 
 @Injectable()
 export class LocaleService {
 
   public translate$(keyPath: string) {
-    return this.languageService.locale$.map((locale: Locale) => {
+    return this.languageService.locale$.pipe(map((locale: Locale) => {
       let result = '';
       let key: string[] = keyPath.split('.');
       let translation: Translation | TranslationValue = locale[key[0]];
       const lastKey: string = key[key.length - 1];
 
-      for (let i: number = 1; translation && i < key.length - 1; i++) {
+      for (let i = 1; translation && i < key.length - 1; i++) {
         translation = translation[key[i]];
       }
 
@@ -21,7 +21,7 @@ export class LocaleService {
       }
 
       return result;
-    });
+    }));
   }
 
   public constructor(private languageService: LanguageService) { }
