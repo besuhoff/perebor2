@@ -1,6 +1,6 @@
 import { Directive, Input, DoCheck, ElementRef, OnInit } from '@angular/core';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
-import 'rxjs/add/operator/mergeMap';
+import { ReplaySubject } from 'rxjs';
+import { mergeMap } from 'rxjs/operators';
 import { LocaleService } from './locale.service';
 
 @Directive({
@@ -19,7 +19,7 @@ export class LocaleKeyDirective implements DoCheck, OnInit {
 
   public ngOnInit() {
     this.key$$
-      .mergeMap((key: string) => this.localeService.translate$(key))
+      .pipe(mergeMap((key: string) => this.localeService.translate$(key)))
       .subscribe((translation: TranslationValue) => this.translation = translation);
   }
 
@@ -31,7 +31,7 @@ export class LocaleKeyDirective implements DoCheck, OnInit {
       const matcher: RegExp = /^\[(\d+)]$/;
 
       for (let node: Node = iterator.nextNode(); node; node = iterator.nextNode()) {
-        let text: string = '';
+        let text = '';
 
         if (!node['_localeData']) {
           const matches = node.textContent.match(matcher);

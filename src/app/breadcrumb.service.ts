@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { Observable } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 
 @Injectable()
 export class BreadcrumbService {
