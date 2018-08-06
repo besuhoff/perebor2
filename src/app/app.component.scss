@@ -1,0 +1,66 @@
+@import "../utils";
+
+:host {
+  display: block;
+  padding-top: 90px;
+  height: 100%;
+}
+
+header, footer {
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  right: 0;
+
+  background: #242424;
+}
+
+footer {
+  bottom: 0;
+  box-shadow: 0 0 10px 0 #101010;
+  color: #a0a0a0;
+
+  p {
+    margin: 0.5em 0;
+  }
+}
+
+header {
+  top: 0;
+  box-shadow: 0 0 10px 0 #000;
+
+  .logo {
+    color: #f0f0f0;
+    text-decoration: none;
+    border-bottom: 0;
+    transition: text-shadow 0.25s;
+    padding-left: 48px;
+    display: block;
+    margin: 0.35em 0 0.35em -12px;
+    background: url(../assets/images/logo.png) left center no-repeat;
+
+    &:hover {
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.5)
+    }
+
+    &.active {
+      pointer-events: none;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0;
+
+    @media (max-width: cols($medium-cols) + 2 * $narrow-gap + 30px) {
+      font-size: 24px;
+    }
+  }
+
+  breadcrumbs {
+    padding: 0 0 0.35em;
+    display: block;
+    overflow: hidden;
+  }
+}

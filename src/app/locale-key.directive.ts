@@ -28,7 +28,7 @@ export class LocaleKeyDirective implements DoCheck, OnInit {
 
     if (this.translation instanceof Array) {
       const iterator = document.createNodeIterator(nativeElement, NodeFilter.SHOW_TEXT);
-      const matcher: RegExp = /^\[(\d+)]$/;
+      const matcher: RegExp = /^\s*\[(\d+)]\s*$/;
 
       for (let node: Node = iterator.nextNode(); node; node = iterator.nextNode()) {
         let text = '';
@@ -39,7 +39,7 @@ export class LocaleKeyDirective implements DoCheck, OnInit {
           if (matches) {
             text = this.translation[+matches[1]];
             node['_localeData'] = {
-              index: +matches[1]
+              index: +matches[1],
             };
 
             node.nodeValue = '';

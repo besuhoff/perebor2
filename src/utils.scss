@@ -1,0 +1,17 @@
+$color-background: #242424;
+
+$col: 80px;
+$wide-gap: 30px;
+$narrow-gap: 10px;
+$wide-cols: 9;
+$medium-cols: 6;
+$narrow-cols: 3;
+
+@function cols($n, $include-gap: false) {
+  $width: $col * $n + $wide-gap * ($n - 1);
+  @if ($include-gap) {
+    $width: $width + $wide-gap;
+  }
+
+  @return $width;
+}

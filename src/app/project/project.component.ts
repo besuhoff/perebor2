@@ -10,7 +10,7 @@ export class ProjectComponent implements OnInit {
   constructor() { }
 
   public ngOnInit() {
-
+    window.scrollTo(0, 0);
   }
 
 }
