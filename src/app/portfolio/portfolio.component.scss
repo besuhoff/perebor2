@@ -67,7 +67,6 @@
     display: flex;
     width: cols(4, true);
     margin-bottom: 1em;
-    flex: 1 1 auto;
 
     @media (min-width: cols($medium-cols) + 2 * $narrow-gap + 30px) and (max-width: cols($wide-cols) + 2 * $wide-gap + 30px) {
       width: 100%;
