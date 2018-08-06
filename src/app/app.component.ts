@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { style, animate, state, transition, trigger } from '@angular/animations';
+import { style, animate, transition, trigger } from '@angular/animations';
 
 import {LanguageService} from './language.service';
 import { BreadcrumbService } from './breadcrumb.service';
@@ -8,7 +8,7 @@ import { BreadcrumbService } from './breadcrumb.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   animations: [
     trigger('shrinkOut', [
       transition('* => void', [

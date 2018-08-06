@@ -1,0 +1,109 @@
+@import "../../utils";
+
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: -$wide-gap;
+  margin-top: -$wide-gap;
+}
+
+.project {
+  width: cols(3);
+  margin-right: $wide-gap;
+  position: relative;
+  border-radius: 5px;
+  margin-top: $wide-gap;
+  background: center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 3px 7px rgba(11, 5, 5, 0.4);
+
+  &__link {
+    display: block;
+    padding-bottom: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    line-height: 40px;
+    padding: 0 12px;
+    border-radius: 0 0 5px 5px;
+    background: rgba(#d7d7d7, 0.6);
+    color: $color-background;
+  }
+
+  &--archived &__description::before {
+    display: inline-block;
+    vertical-align: -3px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    background: url(../../assets/images/16_archive_light.png) center center no-repeat;
+  }
+
+  &--theme--dark &__description {
+    background: rgba($color-background, 0.6);
+    color: #f0f0f0;
+
+    &::before {
+      background-image: url(../../assets/images/16_archive.png);
+    }
+  }
+}
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  max-width: 100%;
+
+  &__block {
+    display: flex;
+    width: cols(4, true);
+    margin-bottom: 1em;
+    flex: 1 1 auto;
+
+    @media (min-width: cols($medium-cols) + 2 * $narrow-gap + 30px) and (max-width: cols($wide-cols) + 2 * $wide-gap + 30px) {
+      width: 100%;
+    }
+
+    @media (max-width: cols($medium-cols) + 2 * $narrow-gap + 30px) {
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  &__avatar {
+    margin-right: $wide-gap;
+    flex: 0 0 auto;
+
+    @media (max-width: cols($medium-cols) + 2 * $narrow-gap + 30px) {
+      margin-bottom: 0.5em;
+      margin-right: 0;
+    }
+  }
+
+  &__info {
+    @media (max-width: cols($medium-cols) + 2 * $narrow-gap + 30px) {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font: inherit;
+    font-weight: bold;
+  }
+
+  &__role {
+    margin-top: 0.5em;
+  }
+}

@@ -1,84 +1,52 @@
-html {
-  height: 100%;
-}
-
-body {
-  font-family: 'PT Sans', sans-serif;
-  font-size: 17px;
-  line-height: 26px;
-  background: #242424;
-  color: #f0f0f0;
-  margin: 0;
-  height: 100%;
-}
-
-app-root {
-  display: block;
-  padding: 90px 10px 10px;
-  max-width: 960px;
-  margin: 0 auto;
-  height: 100%;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  background: #242424;
-  box-shadow: 0 0 10px 0 #000;
-}
-
-header {
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-
-  .logo {
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 0;
-    transition: text-shadow 0.25s;
-
-    &:hover {
-      text-shadow: 0 0 12px rgba(255, 255, 255, 0.5)
-    }
-
-    &.active {
-      pointer-events: none;
-
-      .extras {
-        display: inline-block;
-      }
-    }
-
-    .extras {
-      display: none;
-    }
-  }
-
-  h1 {
-    font-size: 32px;
-    margin: 0.35em 0;
-  }
-
-  breadcrumbs {
-    padding: 0 0 0.35em;
-    display: block;
-    overflow: hidden;
-  }
-}
+@import "utils";
 
 * {
   box-sizing: border-box;
+}
+
+.container {
+  max-width: cols($wide-cols) + 2 * $wide-gap;
+  margin: 0 auto;
+  padding-left: $wide-gap;
+  padding-right: $wide-gap;
+  min-width: 320px;
+
+  @media (min-width: cols($medium-cols) + 2 * $narrow-gap + 1px + 30px) and (max-width: cols($wide-cols) + 2 * $wide-gap + 30px) {
+    max-width: cols($medium-cols) + 2 * $narrow-gap;
+
+    padding-left: $narrow-gap;
+    padding-right: $narrow-gap;
+  }
+
+  @media (max-width: cols($medium-cols) + 2 * $narrow-gap + 30px) {
+    max-width: cols($narrow-cols) + 2 * $narrow-gap;
+
+    padding-left: $narrow-gap;
+    padding-right: $narrow-gap;
+  }
+}
+
+@media (max-width: cols($wide-cols) + 2 * $wide-gap + 30px) {
+  .show-on-wide {
+    display: none;
+  }
+}
+
+@media (max-width: cols($medium-cols) + 2 * $narrow-gap + 30px) {
+  .show-on-medium {
+    display: none;
+  }
+}
+
+
+.row {
+  @extend .container;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
 }
 
 a {
@@ -172,14 +140,11 @@ figcaption {
   caption-side: bottom;
 }
 
-[hidden] {
-  display: none !important;
+project, portfolio {
+  margin-bottom: 90px;
+  display: block;
 }
 
-.loader {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
+[hidden] {
+  display: none !important;
 }
