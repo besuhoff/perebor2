@@ -5,7 +5,7 @@ import { peopleinbusiness } from './project/peopleinbusiness/ru';
 
 export const ru: Locale = {
   base: {
-    header: ['Веб-студия «Перебор»', '*'],
+    header: ['Cтудия «Перебор»', '*'],
     footer: ['<span class="show-on-wide">Принципиально разрешимые задачи всегда разрешимы путём, как&nbsp;минимум, полного перебора.</span> <span class="show-on-medium">Мы изготовим для&nbsp;вас подходящий инструмент, пусть даже для&nbsp;этого придётся перебрать и&nbsp;отбросить множество вариантов.</span> Напишите нам:'],
     archived: 'Работа сдана в архив',
     projects: 'Проекты студии',
