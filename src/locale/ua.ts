@@ -5,7 +5,7 @@ import { peopleinbusiness } from './project/peopleinbusiness/ua';
 
 export const ua: Locale = {
   base: {
-    header: ['Веб-студія «Перебор»', '*'],
+    header: ['Cтудія «Перебор»', '*'],
     footer: ['<span class="show-on-wide">Задачі, що їх можна розв’язати в принципі, завжди можна розв’язати шляхом, щонайменше, повного перебору.</span> <span class="show-on-medium">Ми виробимо для&nbsp;вас гідний інструмент, нехай навіть задля цього прийдеться перебрати та&nbsp;відкинути безліч варіантів.</span> Напишіть нам:'],
     archived: 'Об’єкт здано до архіву',
     projects: 'Проекти студії',
