@@ -5,11 +5,15 @@
 }
 
 .container {
-  max-width: cols($wide-cols) + 2 * $wide-gap;
+  max-width: cols($extra-wide-cols) + 2 * $wide-gap;
   margin: 0 auto;
   padding-left: $wide-gap;
   padding-right: $wide-gap;
   min-width: 320px;
+
+  @media (min-width: cols($wide-cols) + 2 * $wide-gap + 1px + 30px) and (max-width: cols($extra-wide-cols) + 2 * $wide-gap + 30px) {
+    max-width: cols($wide-cols) + 2 * $wide-gap;
+  }
 
   @media (min-width: cols($medium-cols) + 2 * $narrow-gap + 1px + 30px) and (max-width: cols($wide-cols) + 2 * $wide-gap + 30px) {
     max-width: cols($medium-cols) + 2 * $narrow-gap;
