@@ -61,6 +61,7 @@ export class PortfolioComponent implements OnInit {
       theme: 'light',
     },
     {
+      href: 'https://www.facebook.com/xmasbeard/',
       image: 'assets/images/bucket/xmas-beard.jpg',
       description: 'portfolio.xmasBeard',
       theme: 'light',
@@ -88,6 +89,7 @@ export class PortfolioComponent implements OnInit {
     },
     {
       archived: 2018,
+      href: 'https://github.com/stevermeister/feedthedevs',
       image: 'assets/images/bucket/feedthedevs.jpg',
       description: 'portfolio.feedthedevs',
       theme: 'dark',
