@@ -65,8 +65,12 @@
 
   &__block {
     display: flex;
-    width: cols(4, true);
     margin-bottom: 1em;
+    width: cols(6);
+
+    @media (min-width: cols($wide-cols) + 2 * $wide-gap + 30px) and (max-width: cols($extra-wide-cols) + 2 * $wide-gap + 30px) {
+      width: cols(4, true);
+    }
 
     @media (min-width: cols($medium-cols) + 2 * $narrow-gap + 30px) and (max-width: cols($wide-cols) + 2 * $wide-gap + 30px) {
       width: 100%;
