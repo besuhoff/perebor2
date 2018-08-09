@@ -1,13 +1,17 @@
-.breadcrumbs li {
-  display: inline-block;
-  padding-right: 2px;
-}
+.breadcrumbs {
+  font-size: 15px;
 
-.breadcrumbs li:after {
-  content: '\2192';
-  margin-left: 6px;
-}
+  li {
+    display: inline-block;
+    padding-right: 2px;
 
-.breadcrumbs li:last-child:after {
-  display: none;
+    &::after {
+      content: '\2192';
+      margin: 0 4px 0 6px;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
 }

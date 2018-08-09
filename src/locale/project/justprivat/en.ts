@@ -1,15 +1,14 @@
 export const justprivat: Translation = {
-  title: 'A presentational website for the Justprivat',
+  title: 'A website for Justprivat',
   task: 'create a presentational website for the law firm.',
-/*
-  intro: 'Мы разработали структурированный сайт, рассказывающий о компании, её сотрудниках и об услугах для разных групп клиентов.',
-  main: 'Главная страница',
-  serviceDescription: 'Описание услуг на главной',
-  mobileMain: 'Главная на мобильном устройстве',
-  adaptiveSite: 'Сайт удобно просматривать и с компьютеров, и с мобильных устройств.',
-  twoLanguages: 'Сайт выходит на двух языках — русском и украинском. Панель администратора позволяет настраивать переводы содержимого на любых языках.',
-  uaVersion: 'Украинская версия сайта',
-  blogDescribesCases: 'В блоге сотрудники фирмы публикуют ответы на популярные вопросы и актуальные случаи из юридической практики.',
-  cases: 'Блог с актуальными случаями из юридической практики', */
+  intro: 'We’ve developed a well structured website enlighting the company, it’s personnel, and it’s services for different groups of clients.',
+  main: 'Main page',
+  serviceDescription: 'Service description on the main page',
+  mobileMain: 'Main page on mobile',
+  adaptiveSite: 'The website is comfortable to browse both from workstations and mobile devices.',
+  twoLanguages: 'The website is translated to Ukrainian and Russian. Admin panel allows to manage translations to any language.',
+  uaVersion: 'Ukrainian version of the site',
+  blogDescribesCases: 'On the blog the company staff post answers to popular questions and actual cases from the legal practice.',
+  cases: 'The blog with actual cases from the legal practice',
   archivedIn: 'The work is archived in 2016.',
 };
