@@ -15,7 +15,7 @@ export const whoshoe: Translation = {
   infiniteScroll: 'The catalog has an infinite list of products. On the left there is an intuitive block of filters, which follows the viewport on scrolling.',
   filterBlock: 'The block with filters',
   nonPreciseSize: 'Inaccurate size',
-  nonPreciseSizeForGreedy: "For those ready to buy shoes of a smaller size, only would they shine, we have prepared the option called “inaccurate size”",
+  nonPreciseSizeForGreedy: 'For those ready to buy shoes of a smaller size, only would they shine, we have prepared the option called “inaccurate size”',
   floatingBlock: 'Clipped block',
   filterBlockFloats: 'The filter block is clipped to the viewport.',
   shoesNeedRest: 'Sometimes shoes take a little rest.',

@@ -1,5 +1,5 @@
 export const fmg: Translation = {
-  title: 'Online showcase for the Food Market Group',
+  title: 'Food Market Group online showcase',
   task: 'create a web showroom for the imported goods distributor.',
 /*  intro: 'В студии разработали привлекательный сайт с возможностями интернет-витрины и блога.',
   main: 'Главная страница',
