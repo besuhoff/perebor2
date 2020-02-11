@@ -75,7 +75,8 @@ export class PortfolioComponent implements OnInit {
       theme: 'light',
     },
     {
-      href: 'http://remont-far.in.ua',
+      archived: 2019,
+      href: 'http://remont-far.pereborstudio.com',
       image: 'assets/images/bucket/remont-far.jpg',
       description: 'portfolio.lampRepair',
       theme: 'light',
