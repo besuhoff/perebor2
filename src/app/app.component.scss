@@ -1,9 +1,10 @@
 @import "../utils";
 
 :host {
-  display: block;
-  padding-top: 90px;
-  height: 100%;
+  display: flex;
+  padding: 90px 0;
+  flex: 1 1 auto;
+  flex-direction: column;
 }
 
 header, footer {
