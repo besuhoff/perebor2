@@ -24,7 +24,8 @@ export class PortfolioComponent implements OnInit {
       theme: 'dark',
     },
     {
-      href: 'https://smp-tender.ru',
+      archived: 2020,
+      href: 'https://smp-tender.pereborstudio.com',
       image: 'assets/images/bucket/smp-tender.jpg',
       description: 'portfolio.smpTender',
       theme: 'light',
