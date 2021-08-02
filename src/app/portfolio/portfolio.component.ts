@@ -42,7 +42,6 @@ export class PortfolioComponent implements OnInit {
       theme: 'light',
     },
     {
-      href: 'https://spender.pereborstudio.com',
       image: 'assets/images/bucket/spender.jpg',
       description: 'portfolio.spender',
       theme: 'light',
@@ -90,7 +89,6 @@ export class PortfolioComponent implements OnInit {
     },
     {
       archived: 2018,
-      href: 'https://github.com/stevermeister/feedthedevs',
       image: 'assets/images/bucket/feedthedevs.jpg',
       description: 'portfolio.feedthedevs',
       theme: 'dark',
