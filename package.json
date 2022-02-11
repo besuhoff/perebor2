@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "6.0.0",
     "@angular/router": "6.0.0",
     "@ngx-translate/core": "10.0.1",
-    "ajv": "^6.10.0",
+    "ajv": "^6.12.3",
     "core-js": "^2.6.5",
     "ngx-cookie": "3.0.1",
     "rxjs": "6.1.0",
